@@ -1,10 +1,10 @@
 :root {
-    --bg-color: white;
+    --bg-color: #f3f3f3;
     --text-color: #71C9CE;
     --text-muted: #71C9CE;
-    --card-bg: #CBF1F5;
+    --card-bg: #E3FDFD;
     --card-border: rgba(0, 0, 0, 0.1);
-    --primary-gradient: linear-gradient(135deg, #A6E3E9 0%, #71C9CE 100%);
+    --primary-gradient: linear-gradient(135deg, #EEEEEE 10%,#00ADB5 25%, #00ADB5 100%);
     --secondary-gradient: linear-gradient(135deg, #A6E3E9 0%, #71C9CE 100%);
     --orb-opacity: 0.5;
     --navbar-bg: rgba(255, 255, 255, 0.8);
@@ -15,17 +15,19 @@
 }
 
 .dark {
-    --bg-color: #0a0a0f;
-    --text-color: #ffffff;
-    --text-muted: rgba(255, 255, 255, 0.6);
-    --card-bg: rgba(255, 255, 255, 0.05);
+    --bg-color: #222831;
+    --text-color: #EEEEEE;
+    --text-muted: #00ADB5;
+    --text-muted--sub:#EEEEEE;
+    --card-bg: #393E46;
     --card-border: rgba(255, 255, 255, 0.1);
     --orb-opacity: 0.2;
     --navbar-bg: rgba(10, 10, 15, 0.8);
     --toggle-bg: rgba(255, 255, 255, 0.1);
     --toggle-border: rgba(255, 255, 255, 0.2);
     --heading-gradient: linear-gradient(135deg, #ffffff 0%, #a5b4fc 50%, #f5576c 100%);
-    --price-gradient: linear-gradient(135deg, #ffffff 0%, #a5b4fc 100%);
+    --price-gradient: linear-gradient(135deg, #ffffff 25%, #00ADB5 100%);
+    --orb-bg-black:linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
 }
 
 * {
@@ -49,7 +51,6 @@ body {
     left: 0;
     right: 0;
     height: 70px;
-    background: var(--navbar-bg);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--card-border);
@@ -133,32 +134,34 @@ body {
 .orb-1 {
     width: 600px;
     height: 600px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     top: -200px;
     left: -100px;
+    background: var(--orb-bg-black);
     animation-delay: 0s;
-    opacity: 0.1;
+        opacity: 0.01;
+
 }
 
 .orb-2 {
     width: 500px;
     height: 500px;
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    background: var(--orb-bg-black);
     bottom: -150px;
     right: -100px;
     animation-delay: -7s;
-    opacity: 0.1;
+    opacity: 0.01;
 }
 
 .orb-3 {
     width: 400px;
     height: 400px;
-    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    background: var(--orb-bg-black);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     animation-delay: -14s;
-    opacity: 0.1;
+        opacity: 0.01;
+
 
 }
 
@@ -211,7 +214,7 @@ h1 {
     font-weight: 800;
     line-height: 1.2;
     margin-bottom: 16px;
-    background: var(--heading-gradient);
+    background-color: #00ADB5;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -219,7 +222,7 @@ h1 {
 
 .subtitle {
     font-size: 1.1rem;
-    color: var(--text-muted);
+    color: var(--text-muted--sub);
     max-width: 600px;
     margin: 0 auto;
     line-height: 1.5;
@@ -411,6 +414,10 @@ h1 {
     padding: 8px 0;
     font-size: 0.9rem;
     color: var(--text-color);
+}
+
+.features-list li svg{
+    color:#00ADB5;
 }
 
 .check-icon {

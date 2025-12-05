@@ -7,16 +7,13 @@
 
         const plans = [
                 {
-                        name: "Free",
+                        name: "free trial",
                         description: "Perfect for getting started",
-                        monthlyPrice: 0,
-                        annualPrice: 7,
+                        monthlyPrice: 0,   //if you want to change the price
+                        annualPrice: 0,
                         features: [
                                 "Up to 5 projects",
-                                "Basic analytics",
-                                "24/7 support",
-                                "1GB storage",
-                                "Email notifications",
+                                // add features here
                         ],
                         highlighted: false,
                         cta: "Get Started",
@@ -24,37 +21,25 @@
                 {
                         name: "Pro",
                         description: "Best for growing teams",
-                        monthlyPrice: 29,
-                        annualPrice: 24,
-                        features: [
-                                "Unlimited projects",
-                                "Advanced analytics",
-                                "Priority support",
-                                "25GB storage",
-                                "Custom integrations",
-                                "Team collaboration",
-                                "API access",
+                        monthlyPrice: 10,   //if you want to change the price
+                        annualPrice: 8,
+                        features: ["Unlimited projects",
+                                //add features here
                         ],
                         highlighted: true,
                         cta: "Start With Pro",
                 },
                 {
-                        name: "Enterprise",
-                        description: "For large organizations",
-                        monthlyPrice: 99,
-                        annualPrice: 79,
+                        name: "Premium",
+                        description: "For power users",
+                        monthlyPrice: 15,   //if you want to change the price
+                        annualPrice: 12,    
                         features: [
                                 "Everything in Pro",
-                                "Unlimited storage",
-                                "Dedicated account manager",
-                                "Custom contracts",
-                                "SSO & SAML",
-                                "Advanced security",
-                                "SLA guarantee",
-                                "On-premise option",
+                                // add features here
                         ],
                         highlighted: false,
-                        cta: "Contact Sales",
+                        cta: "Get Premium",
                 },
         ];
 
@@ -139,7 +124,7 @@
                 </div>
 
                 <div class="pricing-grid">
-                        {#each plans as plan}
+                        {#each plans.filter((p) => !isAnnual || p.name !== "free trial") as plan}
                                 <div
                                         class="pricing-card"
                                         class:highlighted={plan.highlighted}
@@ -152,9 +137,6 @@
 
                                         <div class="card-header">
                                                 <h2>{plan.name}</h2>
-                                                <p class="plan-description">
-                                                        {plan.description}
-                                                </p>
                                         </div>
 
                                         <div class="price-section">
@@ -179,12 +161,7 @@
                                                                         plan,
                                                                 )} per year
                                                         </p>
-                                                {:else}
-                                                        <p
-                                                                class="annual-savings"
-                                                        >
-                                                                Billed monthly
-                                                        </p>
+                                                
                                                 {/if}
                                         </div>
 
@@ -223,56 +200,6 @@
                                 All plans include a 14-day free trial. No credit
                                 card required.
                         </p>
-                        <div class="trust-badges">
-                                <div class="trust-item">
-                                        <svg
-                                                viewBox="0 0 24 24"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                stroke-width="2"
-                                        >
-                                                <path
-                                                        d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
-                                                ></path>
-                                        </svg>
-                                        <span>SSL Secured</span>
-                                </div>
-                                <div class="trust-item">
-                                        <svg
-                                                viewBox="0 0 24 24"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                stroke-width="2"
-                                        >
-                                                <rect
-                                                        x="3"
-                                                        y="11"
-                                                        width="18"
-                                                        height="11"
-                                                        rx="2"
-                                                        ry="2"
-                                                ></rect>
-                                                <path d="M7 11V7a5 5 0 0110 0v4"
-                                                ></path>
-                                        </svg>
-                                        <span>Data Protected</span>
-                                </div>
-                                <div class="trust-item">
-                                        <svg
-                                                viewBox="0 0 24 24"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                stroke-width="2"
-                                        >
-                                                <circle cx="12" cy="12" r="10"
-                                                ></circle>
-                                                <polyline
-                                                        points="12 6 12 12 16 14"
-                                                ></polyline>
-                                        </svg>
-                                        <span>24/7 Support</span>
-                                </div>
-                        </div>
                 </footer>
         </main>
 </div>

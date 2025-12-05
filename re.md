@@ -68,3 +68,27 @@ npm run dev
   - Created complete pricing page with all features
   - Added glassmorphism styling and animations
   - Implemented responsive design
+
+
+---> new md file 
+  Svelte Pricing Page
+Create a visually appealing, responsive pricing page using the provided Svelte component script and CSS styles.
+
+Key Requirements:
+Structure and Content: Implement the main pricing page structure using the Svelte component's HTML, including the Navbar component, header, toggle-wrapper, and pricing-grid.
+
+Data and Logic:
+
+Use the existing plans array for plan data (Free Trial, Pro, Premium).
+
+Implement the billing toggle functionality using the isAnnual state and the toggleBilling() function.
+
+Display the correct price using the getPrice(plan) function (monthly or annual).
+
+For annual billing, display the savings using the getSavings(plan) function.
+
+Ensure the "Free Trial" plan is hidden when the Annual billing is selected, as per the Svelte logic: {#each plans.filter((p) => !isAnnual || p.name !== "free trial") as plan}.
+
+Visual Styling: Apply all the provided CSS to achieve the dark/light mode functionality, the gradient background effects, and the modern card design, ensuring the "Pro" plan is highlighted with the highlighted class.
+
+Interactivity: Make the Monthly/Annual toggle switch and the Dark/Light theme toggle in the Navbar fully functional based on the Svelte script's functions.
