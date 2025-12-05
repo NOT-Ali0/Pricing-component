@@ -1,6 +1,6 @@
 # Modern Pricing Page
 
-A beautiful, modern pricing page built with Svelte and SvelteKit featuring glassmorphism design.
+A beautiful, modern pricing page built with pure Svelte featuring glassmorphism design.
 
 ## Overview
 
@@ -16,19 +16,19 @@ This project showcases a premium SaaS-style pricing page with:
 ```
 /
 ├── src/
-│   ├── routes/
-│   │   └── +page.svelte    # Main pricing page component
-│   └── app.html            # HTML template
-├── static/
+│   ├── App.svelte          # Main pricing page component
+│   └── main.js             # Application entry point
+├── public/
 │   └── favicon.svg         # Site favicon
+├── index.html              # HTML template
 ├── package.json            # Dependencies and scripts
-├── svelte.config.js        # SvelteKit configuration
+├── svelte.config.js        # Svelte configuration
 └── vite.config.js          # Vite bundler configuration
 ```
 
 ## Tech Stack
 
-- **Framework**: Svelte 5 with SvelteKit 2
+- **Framework**: Pure Svelte 5 (no SvelteKit)
 - **Bundler**: Vite 6
 - **Styling**: Custom CSS with glassmorphism effects
 - **Typography**: Inter font family (Google Fonts)
@@ -58,6 +58,11 @@ npm run dev
 - Touch-friendly toggle controls
 
 ## Recent Changes
+
+- Converted to pure Svelte (December 2025)
+  - Removed SvelteKit dependencies
+  - Uses Svelte 5 with Vite directly
+  - Simplified project structure
 
 - Initial implementation (December 2025)
   - Created complete pricing page with all features

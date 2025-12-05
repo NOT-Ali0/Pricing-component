@@ -1,5 +1,5 @@
 <script>
-	let isAnnual = $state(false);
+	let isAnnual = false;
 
 	const plans = [
 		{
@@ -63,6 +63,10 @@
 		const annualCost = plan.annualPrice * 12;
 		return monthlyCost - annualCost;
 	}
+
+	function toggleBilling() {
+		isAnnual = !isAnnual;
+	}
 </script>
 
 <svelte:head>
@@ -87,7 +91,7 @@
 			<span class:active={!isAnnual}>Monthly</span>
 			<button 
 				class="toggle" 
-				onclick={() => isAnnual = !isAnnual}
+				on:click={toggleBilling}
 				aria-label="Toggle billing period"
 			>
 				<span class="toggle-slider" class:annual={isAnnual}></span>
@@ -113,7 +117,7 @@
 					<div class="price-section">
 						<div class="price">
 							<span class="currency">$</span>
-							<span class="amount" class:changing={true}>{getPrice(plan)}</span>
+							<span class="amount">{getPrice(plan)}</span>
 							<span class="period">/month</span>
 						</div>
 						{#if isAnnual}
