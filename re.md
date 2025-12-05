@@ -5,26 +5,25 @@ A beautiful, modern pricing page built with pure Svelte featuring glassmorphism 
 ## Overview
 
 This project showcases a premium SaaS-style pricing page with:
-- Three pricing tiers (Basic, Pro, Enterprise)
+- Three pricing tiers (free trial
+, Pro, Premium)
 - Monthly/Annual billing toggle with smooth animations
 - Glassmorphism design with backdrop blur and transparency
 - Animated gradient background orbs
 - Fully responsive layout for all device sizes
 
-## Project Structure
+colors used :
+dark:
+primery-bg = #222831
+second-bg = #393E46
+primery-text= #00ADB5
+second-text= #EEEEEE
+light:
+primery-bg = #E3FDFD
+second-bg = #CBF1F5
+primery-text= #A6E3E9
+second-text= #71C9CE
 
-```
-/
-├── src/
-│   ├── App.svelte          # Main pricing page component
-│   └── main.js             # Application entry point
-├── public/
-│   └── favicon.svg         # Site favicon
-├── index.html              # HTML template
-├── package.json            # Dependencies and scripts
-├── svelte.config.js        # Svelte configuration
-└── vite.config.js          # Vite bundler configuration
-```
 
 ## Tech Stack
 
@@ -59,10 +58,7 @@ npm run dev
 
 ## Recent Changes
 
-- Converted to pure Svelte (December 2025)
-  - Removed SvelteKit dependencies
-  - Uses Svelte 5 with Vite directly
-  - Simplified project structure
+
 
 - Initial implementation (December 2025)
   - Created complete pricing page with all features
@@ -70,8 +66,8 @@ npm run dev
   - Implemented responsive design
 
 
----> new md file 
-  Svelte Pricing Page
+---> new message
+  
 Create a visually appealing, responsive pricing page using the provided Svelte component script and CSS styles.
 
 Key Requirements:
